@@ -33,10 +33,6 @@ public class TestJarFilesystem {
   
   @Test
   public void testRead() throws IOException {
-    Set<String> expectChildName = new HashSet<>();
-    expectChildName.add("maven");
-    expectChildName.add("MANIFEST.MF");
-
     Configuration conf = new Configuration();
     conf.set("fs.jar.impl", JarFilesystem.class.getName());
     Path path = TestResource.getResourcePath("/hcfsdemo-1.0-SNAPSHOT.jar");
